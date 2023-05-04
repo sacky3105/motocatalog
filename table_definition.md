@@ -1,0 +1,13 @@
+バイク番号  moto_no
+バイク名    moto_name
+シート高    seat_height
+シリンダー  cylinder
+冷却    cooling
+価格    price
+コメント    comment
+ブランドID  brand_id
+バージョン  version
+登録日時    ins_dt
+更新日時    upd_dt
+ブランドID  brand_id
+ブランド名  brand_name
