@@ -3,17 +3,22 @@ package jp.cp.plana.sample.motocatalog.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 import jp.cp.plana.sample.bean.Brand;
 import jp.cp.plana.sample.bean.Motorcycle;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j //ログ部品を使えるようになった。
 public class MotosController {
+
     
     @RequestMapping("/hello")
     public String hello(@RequestParam String name, Model model){
@@ -39,7 +44,11 @@ public class MotosController {
         model.addAttribute("brands",brands);
         model.addAttribute("motos",motos);
 
+        log.debug("motos : {}", motos); // ログ出力
+
 
         return "moto_list";
+
+
     }
 }
