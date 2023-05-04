@@ -1,4 +1,4 @@
-package jp.cp.plana.sample.bean;
+package jp.cp.plana.sample.motocatalog.beans;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
