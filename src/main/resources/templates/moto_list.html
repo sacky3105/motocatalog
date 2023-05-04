@@ -36,10 +36,7 @@
                 <div class="mb-3">
                     <label for="brand" class="form-label">バイクメーカー</label>
                     <select class="form-select" id="brand" aria-label="Default select example">
-                        <option selected>Honda</option>
-                        <option value="1">Kawasaki</option>
-                        <option value="2">Yamaha</option>
-                        <option value="3">Suzuki</option>
+                        <option th:each="brand : ${brands}" th:text="${brand.brandName}" th:value="${brand.brandId}"></option>
                     </select>
                 </div>
             </div>
@@ -72,13 +69,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Kawasaki</td>
-                            <td>Z900RS</td>
-                            <td>水冷4気筒</td>
-                            <td>1500000</td>
-                            <td>かっこいい</td>
+                        <tr th:each="moto : ${motos}" th:object="${moto}">
+                            <th scope="row" th:text="*{motoNo}"></th>
+                            <td th:text="*{brand.brandName}"></td>
+                            <td th:text="*{motoName}"></td>
+                            <td th:text="*{cooling} + *{cylinder}">水冷4気筒</td>
+                            <td th:text="*{price}">1500000</td>
+                            <td th:text="*{comment}">かっこいい</td>
                         </tr>
                     </tbody>
                 </table>
