@@ -44,7 +44,7 @@ public class MotosController {
         model.addAttribute("brands",brands);
         model.addAttribute("motos",motos);
 
-        log.info("motos : {}", motos); // ログ出力
+        log.debug("motos : {}", motos); // ログ出力
 
 
         return "moto_list";
