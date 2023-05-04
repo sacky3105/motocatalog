@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example  #ルートユーザーのパスワード
+      MYSQL_DATABASE: motocatalogdb #データベース名
+      MYSQL_USER: develop123           #ユーザー名
+      MYSQL_PASSWORD: develop123       #パスワード
+    ports:
+      - 3306:3306 # コンテナ外部からアクセス出来るようにする。
