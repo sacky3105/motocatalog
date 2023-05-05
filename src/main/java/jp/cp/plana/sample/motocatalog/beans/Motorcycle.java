@@ -28,12 +28,14 @@ public class Motorcycle {
     // コメント    
     private String comment;
     // ブランド  
-    private Brand brand;
+    public Brand brand;
+    //ブランドID
+    private Brand brandId;
     // バージョン  
     private Integer version;
     // 登録日時    
-    private LocalDateTime ins_dt;
+    private LocalDateTime insDt;
     // 更新日時    
-    private LocalDateTime upd_dt;
+    private LocalDateTime updDt;
 
 }
