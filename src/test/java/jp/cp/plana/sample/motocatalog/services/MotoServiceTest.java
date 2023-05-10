@@ -12,6 +12,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import jp.cp.plana.sample.motocatalog.beans.Motorcycle;
@@ -174,6 +175,7 @@ public class MotoServiceTest {
     @DisplayName("バイク情報更新")
     @Test
     @Transactional
+    @Rollback
     void test011(){
         Motorcycle before = service.getMotos(1);
         before.setMotoName("motomoto");

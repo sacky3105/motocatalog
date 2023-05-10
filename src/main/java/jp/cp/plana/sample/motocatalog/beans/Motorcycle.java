@@ -30,7 +30,7 @@ public class Motorcycle {
     // ブランド  
     public Brand brand;
     //ブランドID
-    private Brand brandId;
+    public Brand brandID;
     // バージョン  
     private Integer version;
     // 登録日時    
